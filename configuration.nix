@@ -54,6 +54,8 @@
   # Fonts
   fonts.packages = with pkgs; [
     jetbrains-mono
+    fira-code-nerdfont
+    monaspace
     nerd-font-patcher
   ];
 

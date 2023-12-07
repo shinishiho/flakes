@@ -266,8 +266,9 @@
     avizo
     wlogout
     wpaperd
-    # swww
+    swww
     gifsicle
+    envsubst
 
     nuspell
     hyphen
@@ -277,6 +278,7 @@
     vulnix       #scan command: vulnix --system
     clamav       #scan command: sudo freshcalm; clamscan [options] [file/directory/-]
     chkrootkit   #scan command: sudo chkrootkit
+    glib
 
     # passphrase2pgp
     pass-wayland
