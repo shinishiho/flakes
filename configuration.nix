@@ -13,6 +13,7 @@
     auto-optimise-store = true;
   };
   nix.optimise.automatic = true;
+  nixpkgs.config.allowUnfree = true;
   nix.gc = { # Delete old generations after some time
     automatic = true;
     dates = "daily";
