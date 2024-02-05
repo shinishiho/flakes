@@ -11,6 +11,7 @@
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];    
     auto-optimise-store = true;
+    tarball-ttl = 60 * 10;
   };
   nix.optimise.automatic = true;
   nixpkgs.config.allowUnfree = true;
