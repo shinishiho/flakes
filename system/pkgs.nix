@@ -15,4 +15,8 @@
     auto-cpufreq.enable = true;
     fwupd.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    greetd.tuigreet
+  ];
 }

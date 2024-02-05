@@ -9,10 +9,10 @@
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   # Select internationalisation properties.
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "colemak_dh"; # Keyboard layout here. Comment this line to use the default layout
-    xkbOptions = "grp:alt_shift_toggle";
+    variant = "colemak_dh"; # Keyboard layout here. Comment this line to use the default layout
+    options = "grp:alt_shift_toggle";
   };
   
   i18n.supportedLocales = [
