@@ -12,6 +12,15 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
+        home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.nakxkri = import ./home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
       ];
     };
   };
