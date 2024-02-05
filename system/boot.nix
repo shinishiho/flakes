@@ -2,7 +2,6 @@
 
 {
     boot = {
-
         loader.systemd-boot.enable = true;
         loader.efi.canTouchEfiVariables = true;
         loader.efi.efiSysMountPoint = "/boot";
@@ -19,7 +18,7 @@
         };
 
 # Linux Kernel
-        kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
+        kernelPackages = pkgs.linuxKernel.packages.linux_zen;
         kernelParams = [ 
             "quiet"
 	    "splash"
@@ -35,17 +34,17 @@
             # "acpi_rev_override=5"
             "security=selinux"
         ];
-# kernelPatches = [ {
-#      name = "selinux-config";
-#      patch = null;
-#      extraConfig = '' 
-#              SECURITY_SELINUX y
-#              SECURITY_SELINUX_BOOTPARAM n
-#              SECURITY_SELINUX_DEVELOP y
-#              SECURITY_SELINUX_AVC_STATS y
-#              DEFAULT_SECURITY_SELINUX n
-#            '';
-# } ];
+kernelPatches = [ {
+     name = "selinux-config";
+     patch = null;
+     extraConfig = '' 
+             SECURITY_SELINUX y
+             SECURITY_SELINUX_BOOTPARAM n
+             SECURITY_SELINUX_DEVELOP y
+             SECURITY_SELINUX_AVC_STATS y
+             DEFAULT_SECURITY_SELINUX n
+           '';
+} ];
     };
 
 }
